@@ -7,11 +7,10 @@ include_once "navbar.php";
 $mensagem = '';
 $tipo_mensagem = '';
 
-// Função para criar a pasta uploads se não existir
 function garantirPastaUploads() {
     $pasta = 'uploads/';
     if (!is_dir($pasta)) {
-        // Tenta criar a pasta com permissão 0777 (leitura/escrita para todos)
+       
         if (mkdir($pasta, 0777, true)) {
             return true;
         } else {
@@ -49,9 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $erros[] = 'Estoque não pode ser negativo!';
     }
     
-    // Upload da imagem
     if (!empty($_FILES['imagem']['name'])) {
-        // Verificar e criar a pasta uploads automaticamente
+       
         if (!garantirPastaUploads()) {
             $erros[] = 'Não foi possível criar a pasta de uploads!';
         } else {

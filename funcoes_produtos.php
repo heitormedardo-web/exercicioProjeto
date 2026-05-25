@@ -1,7 +1,4 @@
 <?php
-/**
- * funcoes_produtos.php - Funções específicas para produtos
- */
 
 function obterProdutos(PDO $pdo): array {
     $stmt = $pdo->query("SELECT * FROM produtos ORDER BY nome ASC");
@@ -27,7 +24,7 @@ function exibirTabelaProdutos(array $produtos): void {
         $preco = 'R$ ' . number_format($produto['preco'], 2, ',', '.');
         $estoque = $produto['estoque'];
         
-        // Caminho da imagem
+        
         if (!empty($produto['imagem']) && file_exists('uploads/' . $produto['imagem'])) {
             $imagem = 'uploads/' . $produto['imagem'];
         } else {

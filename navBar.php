@@ -1,4 +1,3 @@
-<!-- navbar.php -->
 <nav class="navbar">
     <div class="nav-container">
         <div class="logo">

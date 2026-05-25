@@ -4,7 +4,7 @@
  * @return array 
  */
 function obterContatos(PDO $pdo): array {
-    // Query ordenada por nome
+    
     $stmt = $pdo->query('SELECT * FROM contatos ORDER BY nome ASC');
     
     return $stmt->fetchAll();

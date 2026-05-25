@@ -4,7 +4,6 @@ require_once "config.php";
 include_once "cabecalho.php";
 include_once "navbar.php";
 
-// Buscar clientes do banco de dados
 $stmt = $pdo->query("SELECT * FROM clientes ORDER BY nome ASC");
 $clientes = $stmt->fetchAll();
 

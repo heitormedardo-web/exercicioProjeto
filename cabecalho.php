@@ -1,4 +1,3 @@
-<!-- cabecalho.php -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Lista de Contatos</title>
     <style>
-        /* RESET E ESTILOS BASE */
+        
         * {
             margin: 0;
             padding: 0;
@@ -20,20 +19,18 @@
             transition: background-color 0.3s, color 0.3s;
         }
 
-        /* MODO CLARO (padrão) */
         body.light-mode {
             background-color: #f5f5f5;
             color: #333;
         }
 
-        /* MODO ESCURO */
+       
         body.dark-mode {
             background-color: #1a1a1a;
             color: #f5f5f5;
         }
 
-        /* NAVBAR */
-        .navbar {
+               .navbar {
             background-color: #4CAF50;
             color: white;
             padding: 1rem 2rem;
@@ -61,8 +58,7 @@
             font-size: 1.5rem;
         }
 
-        /* MENU DESKTOP */
-        .nav-menu {
+                .nav-menu {
             display: flex;
             list-style: none;
             gap: 1.5rem;
@@ -80,8 +76,7 @@
             background-color: rgba(255,255,255,0.2);
         }
 
-        /* MENU HAMBÚRGUER */
-        .hamburger {
+                .hamburger {
             display: none;
             cursor: pointer;
             flex-direction: column;
@@ -110,8 +105,7 @@
             transform: translateY(-8px) rotate(-45deg);
         }
 
-        /* BOTÃO DARK MODE */
-        .btn-toggle {
+                .btn-toggle {
             background-color: #333;
             color: white;
             border: none;
@@ -134,16 +128,14 @@
             color: #333;
         }
 
-        /* CONTAINER PRINCIPAL */
-        .main-container {
+                .main-container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             min-height: calc(100vh - 250px);
         }
 
-        /* TABELA ESTILIZADA */
-        .contatos-table {
+              .contatos-table {
             width: 100%;
             border-collapse: collapse;
             background-color: white;
@@ -176,8 +168,7 @@
             border-bottom: 1px solid #e0e0e0;
         }
 
-        /* Efeito zebra - linhas alternadas */
-        .contatos-table tbody tr:nth-child(even) {
+               .contatos-table tbody tr:nth-child(even) {
             background-color: #f9f9f9;
         }
 
@@ -185,8 +176,7 @@
             background-color: #363636;
         }
 
-        /* Efeito hover nas linhas */
-        .contatos-table tbody tr:hover {
+               .contatos-table tbody tr:hover {
             background-color: #f0f0f0;
             transition: background-color 0.3s;
             cursor: pointer;
@@ -196,7 +186,6 @@
             background-color: #404040;
         }
 
-        /* Bordas laterais para destacar linhas */
         .contatos-table tbody tr {
             border-left: 3px solid transparent;
             transition: all 0.3s;
@@ -210,8 +199,7 @@
             border-left-color: #764ba2;
         }
 
-        /* Estilo para a primeira coluna (número) */
-        .contatos-table td:first-child {
+               .contatos-table td:first-child {
             font-weight: bold;
             color: #667eea;
             width: 60px;
@@ -221,8 +209,7 @@
             color: #9b8bea;
         }
 
-        /* RODAPÉ */
-        .footer {
+            .footer {
             background-color: #333;
             color: white;
             text-align: center;
@@ -249,8 +236,7 @@
             text-decoration: underline;
         }
 
-        /* TÍTULO DA PÁGINA */
-        .page-title {
+                .page-title {
             margin: 20px 0;
             color: #4CAF50;
         }
@@ -259,16 +245,14 @@
             color: #7bc47f;
         }
 
-        /* MENSAGEM SEM CONTATOS */
-        .no-contacts {
+                .no-contacts {
             text-align: center;
             padding: 40px;
             font-size: 18px;
             color: #999;
         }
 
-        /* RESPONSIVIDADE */
-        @media (max-width: 768px) {
+                @media (max-width: 768px) {
             .hamburger {
                 display: flex;
             }
@@ -331,8 +315,7 @@
             }
         }
 
-        /* ANIMAÇÃO DO MENU */
-        @keyframes slideIn {
+                @keyframes slideIn {
             from {
                 transform: translateX(-100%);
                 opacity: 0;

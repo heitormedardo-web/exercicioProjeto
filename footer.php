@@ -1,4 +1,3 @@
-<!-- footer.php -->
 <footer class="footer">
     <div class="footer-content">
         <p>&copy; <?php echo date('Y'); ?> Agenda de Contatos - Todos os direitos reservados</p>

@@ -1,5 +1,4 @@
 <?php
-// delete.php - Excluir contato
 session_start();
 
 require_once "config.php";
@@ -12,7 +11,6 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 
 $id = (int)$_GET['id'];
 
-// Passa $pdo como argumento
 $contato = buscarContatoPorId($pdo, $id);
 
 if ($contato) {

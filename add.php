@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $mensagem = ' Por favor, insira um e-mail válido!';
         $tipo_mensagem = 'erro';
     } else {
-        // Passa $pdo como argumento
+        
         if (adicionarContato($pdo, $nome, $email, $telefone)) {
             $_SESSION['mensagem'] = ' Contato adicionado com sucesso!';
             $_SESSION['tipo_mensagem'] = 'sucesso';
@@ -78,7 +78,7 @@ include_once 'navbar.php';
 </div>
 
 <style>
-    /* Seus estilos existentes permanecem iguais */
+    
     .form-container {
         max-width: 600px;
         margin: 0 auto;
